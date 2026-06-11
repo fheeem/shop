@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <setting name="logImpl" value="LOG4J2"/>
+    </settings>
+
+    <typeAliases>
+        <typeAlias alias="itemDto" type="com.macademy.shop.item.dto.ItemDto" />
+        <typeAlias alias="itemImgDto" type="com.macademy.shop.item.dto.ItemImgDto" />
+        <typeAlias alias="itemSearchDto" type="com.macademy.shop.item.dto.ItemSearchDto" />
+        <typeAlias alias="memberDto" type="com.macademy.shop.member.dto.MemberDto" />
+        <typeAlias alias="mainItemDto" type="com.macademy.shop.main.dto.MainItemDto" />
+        <typeAlias alias="orderDto" type="com.macademy.shop.order.dto.OrderDto" />
+        <typeAlias alias="orderItemDto" type="com.macademy.shop.order.dto.OrderItemDto" />
+        <typeAlias alias="orderHistDto" type="com.macademy.shop.order.dto.OrderHistDto" />
+        <typeAlias alias="cartDto" type="com.macademy.shop.cart.dto.CartDto" />
+        <typeAlias alias="cartItemDto" type="com.macademy.shop.cart.dto.CartItemDto" />
+        <typeAlias alias="cartDetailDto" type="com.macademy.shop.cart.dto.CartDetailDto" />
+
+    </typeAliases>
+</configuration>

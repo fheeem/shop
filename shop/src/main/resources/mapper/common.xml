@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.macademy.shop.mapper.commonSql">
+    <sql id="itemSearchConditions">
+        <if test="itemSearchDto.searchDateType != null and itemSearchDto.searchDateType != ''">
+            <if test="itemSearchDto.searchDateType.equals('1d')">
+                AND reg_time &gt; DATE_SUB(NOW(), INTERVAL 1 DAY)
+            </if>
+            <if test="itemSearchDto.searchDateType.equals('1w')">
+                AND reg_time &gt; DATE_SUB(NOW(), INTERVAL 1 WEEK)
+            </if>
+            <if test="itemSearchDto.searchDateType.equals('1m')">
+                AND reg_time &gt; DATE_SUB(NOW(), INTERVAL 1 MONTH)
+            </if>
+            <if test="itemSearchDto.searchDateType.equals('6m')">
+                AND reg_time &gt; DATE_SUB(NOW(), INTERVAL 6 MONTH)
+            </if>
+        </if>
+
+        <if test="itemSearchDto.searchSellStatus != null">
+            AND item_sell_status = #{itemSearchDto.searchSellStatus}
+        </if>
+
+        <if test="itemSearchDto.searchBy != null and itemSearchDto.searchText != ''">
+            <choose>
+                <when test="(itemSearchDto.searchBy).equals('itemName')">
+                    AND item_name LIKE CONCAT('%', #{itemSearchDto.searchText}, '%')
+                </when>
+                <when test="(itemSearchDto.searchBy).equals('itemDetail')">
+                    AND item_detail LIKE CONCAT('%', #{itemSearchDto.searchText}, '%')
+                </when>
+            </choose>
+        </if>
+    </sql>
+</mapper>
