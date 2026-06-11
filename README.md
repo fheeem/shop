@@ -27,12 +27,8 @@ shop/
 
 Screenshot
 
-### UI
 ![UI](./images/shop-ui.png)
-
-### Code
 ![Code](./images/shop-code.png)
-注意事項
 
 本プロジェクトは学習目的で制作したものであり、実際のサービスではありません。
 
