@@ -1,3 +1,4 @@
+
 Shop Project
 目的
 
@@ -27,8 +28,7 @@ shop/
 
 Screenshot
 
-![UI](./images/shop-ui.png)
-![Code](./images/shop-code.png)
+<img width="1918" height="1013" alt="shop-code" src="https://github.com/user-attachments/assets/972fe89e-e1fe-4fea-a910-91a533f01ba2" />
 
 本プロジェクトは学習目的で制作したものであり、実際のサービスではありません。
 
